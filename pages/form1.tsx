@@ -1,7 +1,7 @@
 import { useEntry } from "@/lib/swr-hooks";
 import { useRouter } from "next/router";
 
-export function Form1() {
+export default function Form1() {
   const router = useRouter();
   const id = router.query.id?.toString();
   const { data } = useEntry(id);
@@ -24,14 +24,24 @@ export function Form1() {
             <label htmlFor="first_name" className="form-label">
               First Name
             </label>
-            <input type="text" className="form-control" id="first_name" />
+            <input
+              type="text"
+              className="form-control"
+              id="first_name"
+              defaultValue={data.employeeFirstName}
+            />
           </div>
 
           <div className="mb-3">
             <label htmlFor="last_name" className="form-label">
               Last Name
             </label>
-            <input type="text" className="form-control" id="last_name" />
+            <input
+              type="text"
+              className="form-control"
+              id="last_name"
+              defaultValue={data.employeeLastName}
+            />
           </div>
 
           <div className="mb-3">
@@ -43,6 +53,7 @@ export function Form1() {
               className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              defaultValue={data?.employeeEmail}
             />
           </div>
         </div>

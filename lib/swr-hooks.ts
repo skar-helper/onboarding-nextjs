@@ -8,12 +8,12 @@ export function useEntries() {
   const { data, error } = useSWR(`/api/onboarding/get`, fetcher);
 
   return {
-    entries: data,
+    data,
     isLoading: !error && !data,
     isError: error,
   };
 }
 
 export function useEntry(id?: string) {
-  return useSWR(`/api/get?id=${id}`, fetcher);
+  return useSWR(`/api/onboarding/get?id=${id}`, fetcher);
 }

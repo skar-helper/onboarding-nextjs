@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { Form1 } from "./form1";
+import Form1 from "./form1";
 
 export default function Home() {
   return (
