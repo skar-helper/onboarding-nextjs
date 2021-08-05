@@ -28,7 +28,7 @@ export default function Form1() {
               type="text"
               className="form-control"
               id="first_name"
-              defaultValue={data.employeeFirstName}
+              defaultValue={data?.employeeFirstName}
             />
           </div>
 
@@ -40,7 +40,7 @@ export default function Form1() {
               type="text"
               className="form-control"
               id="last_name"
-              defaultValue={data.employeeLastName}
+              defaultValue={data?.employeeLastName}
             />
           </div>
 
