@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { Form1 } from "./form1";
 
 export default function Home() {
@@ -18,13 +19,13 @@ export default function Home() {
           style={{ backgroundColor: "#303846" }}
         >
           <div className="container-fluid">
-            <span className="navbar-text">
+            <span className="navbar-text text-center">
               <Link href="/">
                 <a className="navbar-brand text-white link-light">
-                  <img
+                  <Image
                     src="https://core.skaraudio.com/images/skar-audio-logo-white.svg"
-                    width="60"
-                    height="40"
+                    width="50"
+                    height="20"
                   />{" "}
                   Skar Audio Onboarding
                 </a>
